@@ -12,12 +12,11 @@
 
 int	ft_strlcat(char *dst, char *src, int size)
 {
-	int i_dst;
+	int	i_dst;
 	int	i_src;
 
 	i_dst = 0;
 	i_src = 0;
-
 	while (dst[i_dst])
 	{
 		i_dst++;

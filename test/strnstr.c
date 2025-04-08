@@ -4,10 +4,10 @@
 
 int main(void)
 {
-	char *big = "Foo Bar Baz";
-	char *little = "Bar";
+	char *big = "FooBarBaz";
+	char *little = "Baz";
 	char *ptr;
 
-	ptr = strnstr(big, little, 4);
+	ptr = strnstr(big, little, 5);
 	printf("%s", ptr);
 }

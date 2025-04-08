@@ -21,9 +21,8 @@ int	ft_strlcpy(char *dst, char *src, int size)
 		{
 			dst[i] = src[i];
 		}
-		i++;		
+		i++;
 		dst[i] = '\0';
 	}
-
 	return (i);
 }
