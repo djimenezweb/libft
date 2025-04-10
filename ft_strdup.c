@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 10:08:34 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/09 10:08:36 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/09 11:36:59 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/09 11:37:02 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, int n)
-{
-	unsigned char	*ptr;
+/*
+The strdup() function returns a pointer to a new string which is a
+duplicate of the string STR.
+Memory for the new string is obtained with malloc(), and can be freed with
+free().
+*/
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
+#include <stdlib.h>
+
+char	*ft_strdup(const char *str)
+{
+	int		len;
+	char	*duplicate;
+
+	while (*str)
 	{
-		*ptr = '\0';
-		s++;
-		n--;
+		len++;
+	}
+	duplicate = malloc(len);
+	str -= len;
+	while (str <= len)
+	{
+		*duplicate = *str;
+		duplicate++;
+		str++;
 	}
 }

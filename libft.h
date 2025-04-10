@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 10:08:34 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/09 10:08:36 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/10 13:11:40 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_bzero(void *s, int n)
-{
-	unsigned char	*ptr;
+#ifndef LIBFT_H
+#define LIBFT_H
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
-	{
-		*ptr = '\0';
-		s++;
-		n--;
-	}
-}
+int	ft_strlen(char *str);
+
+#endif

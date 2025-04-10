@@ -13,10 +13,10 @@
 int	ft_atoi(char *str)
 {
 	int	integer;
-	int	is_negative;
+	int	sign;
 
 	integer = 0;
-	is_negative = 1;
+	sign = 1;
 	while (*str >= 9 && *str <= 13 || *str == ' ')
 	{
 		str++;
@@ -25,7 +25,7 @@ int	ft_atoi(char *str)
 	{
 		if (*str == '-')
 		{
-			is_negative = -1;
+			sign = -1;
 		}
 		str++;
 	}
@@ -34,5 +34,5 @@ int	ft_atoi(char *str)
 		integer = (integer * 10) + *str - '0';
 		str++;
 	}
-	return (integer * is_negative);
+	return (integer * sign);
 }

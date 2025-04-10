@@ -28,7 +28,7 @@ After copying all the bytes, it returns the destination pointer.
 https://marmota.medium.com/c-language-making-memmove-def8792bb8d5
 */
 
-void	*memmove(void *dest, void *src, int n)
+void	*ft_memmove(void *dest, void *src, int n)
 {
 	char	*cdest;
 	char	*csrc;

@@ -10,18 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *s, int c, int n)
-{
-	unsigned char	*ptr;
-	int				i;
+#include <stdio.h>
+#include <string.h>
 
-	ptr = (unsigned char *)s;
-	i = 0;
-	while (i < n)
+/*
+https://stackoverflow.com/questions/76154111/what-are-the-correct-types-for-memset-function
+
+Recibimos void *s
+Creamos e inicializamos unsigned char *str = s.
+Modificamos str pero al devolver s tiene los mismos cambios... ¿Por qué?
+*/
+
+void	*ft_memset(void *s, int c, int n)
+{
+	unsigned char	*str;
+
+	str = s;
+	while (n > 0)
 	{
-		*ptr = (unsigned char)c;
-		i++;
-		ptr++;
+		*str = c;
+		str++;
+		n--;
 	}
 	return (s);
+}
+
+int	main(void)
+{
+	char str[] = "---------";
+	printf("%s\n", str);
+	ft_memset(str, '$', 10);
+	printf("%s\n", str);
 }
