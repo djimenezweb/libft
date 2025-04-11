@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
 /*
 https://stackoverflow.com/questions/76154111/what-are-the-correct-types-for-memset-function
 
@@ -33,12 +30,4 @@ void	*ft_memset(void *s, int c, int n)
 		n--;
 	}
 	return (s);
-}
-
-int	main(void)
-{
-	char str[] = "---------";
-	printf("%s\n", str);
-	ft_memset(str, '$', 10);
-	printf("%s\n", str);
 }

@@ -34,7 +34,7 @@ de puntero único que más tarde puede pasarse con éxito a free().
 
 #include <stdlib.h>
 
-void	*ft_calloc(size_t nelem, size_t size)
+void	*ft_calloc(int nelem, int size)
 {
 	int	*arr;
 	int	i;

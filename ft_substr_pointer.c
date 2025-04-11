@@ -17,20 +17,28 @@ char	*ft_substr(char *s, unsigned int start, unsigned int len)
 {
 	unsigned int		i;
 	char				*sub;
+	char				*cursor;
 
 	i = 0;
 	sub = malloc((len + 1) * sizeof(char));
+	cursor = sub;
 	if (!sub)
 	{
 		return (NULL);
 	}
-	while (s[start] && i < len)
+	while (*s && start > 0)
 	{
-		sub[i] = s[start];
-		start++;
+		s++;
+		start--;
+	}
+	while (*s && i < len)
+	{
+		*cursor = *s;
+		cursor++;
+		s++;
 		i++;
 	}
-	sub[i] = '\0';
+	*cursor = '\0';
 	return (sub);
 }
 
@@ -39,7 +47,7 @@ int	main (void)
 	char *str = "Dinamarca";
 	char *sub;
 
-	sub = ft_substr(str, 0, 3);
+	sub = ft_substr(str, 5, 3);
 	printf("str: %s\n", str);
 	printf("sub: %s\n", sub);
 }
