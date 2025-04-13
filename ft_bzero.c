@@ -6,19 +6,19 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:08:34 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 15:57:33 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:48:41 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 void	ft_bzero(void *s, int n)
 {
-/* 	unsigned char	*ptr;
+	unsigned char *s_char;
 
-	ptr = (unsigned char *)s;
+	s_char = s;
 	while (n > 0)
 	{
-		*ptr = '\0';
-		s++;
+		*s_char = 0;
+		s_char++;
 		n--;
-	} */
+	}
 }
