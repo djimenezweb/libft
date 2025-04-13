@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:32:26 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/09 10:32:28 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 15:58:00 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 /*
 The purpose of memmove() is to copy a block of memory from one place to
@@ -30,7 +30,7 @@ https://marmota.medium.com/c-language-making-memmove-def8792bb8d5
 
 void	*ft_memmove(void *dest, void *src, int n)
 {
-	char	*cdest;
+/* 	char	*cdest;
 	char	*csrc;
 
 	cdest = (char)dest;
@@ -51,5 +51,5 @@ void	*ft_memmove(void *dest, void *src, int n)
 			*cdest-- = *csrc--;
 		}
 	}
-	return (dest);
+	return (dest); */
 }

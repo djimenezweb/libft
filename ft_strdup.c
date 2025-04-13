@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:59 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/09 11:37:02 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:02:56 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 /*
 The strdup() function returns a pointer to a new string which is a
@@ -21,7 +21,7 @@ free().
 
 char	*ft_strdup(const char *str)
 {
-	int		len;
+/* 	int		len;
 	char	*duplicate;
 
 	while (*str)
@@ -35,5 +35,5 @@ char	*ft_strdup(const char *str)
 		*duplicate = *str;
 		duplicate++;
 		str++;
-	}
+	} */
 }

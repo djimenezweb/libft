@@ -1,19 +1,18 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:26:36 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/10 11:26:42 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:10:13 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-#include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_substr(char *s, unsigned int start, unsigned int len)
+char	*ft_substr(char *s, unsigned int start, int len)
 {
 	unsigned int		i;
 	char				*sub;
@@ -22,7 +21,7 @@ char	*ft_substr(char *s, unsigned int start, unsigned int len)
 	sub = malloc((len + 1) * sizeof(char));
 	if (!sub)
 	{
-		return (NULL);
+		return (0);
 	}
 	while (s[start] && i < len)
 	{
@@ -32,14 +31,4 @@ char	*ft_substr(char *s, unsigned int start, unsigned int len)
 	}
 	sub[i] = '\0';
 	return (sub);
-}
-
-int	main (void)
-{
-	char *str = "Dinamarca";
-	char *sub;
-
-	sub = ft_substr(str, 0, 3);
-	printf("str: %s\n", str);
-	printf("sub: %s\n", sub);
 }

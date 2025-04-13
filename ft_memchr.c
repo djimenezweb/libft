@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:55:10 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/09 10:55:13 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:00:08 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 /*
 The memchr() function scans the initial N bytes of the memory area pointed to
@@ -23,7 +23,7 @@ in the given memory area.
 
 void	*ft_memchr(void *s, int c, int n)
 {
-	unsigned char	*cs;
+/* 	unsigned char	*cs;
 	unsigned char	cc;
 
 	cs = (unsigned char)s;
@@ -35,5 +35,5 @@ void	*ft_memchr(void *s, int c, int n)
 			return (cs);
 		}
 		cs++;
-	}
+	} */
 }

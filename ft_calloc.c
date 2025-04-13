@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielji <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:44 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/09 11:36:46 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:02:30 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 /*
 The calloc() function allocates memory for an array of NELEM elements
@@ -32,17 +32,15 @@ Si NELEM o SIZE es 0, entonces calloc() devuelve un valor
 de puntero único que más tarde puede pasarse con éxito a free().
 */
 
-#include <stdlib.h>
-
 void	*ft_calloc(int nelem, int size)
 {
 	int	*arr;
 	int	i;
 
 	arr = malloc(nelem * size);
-	if (arr == NULL)
+	if (!arr)
 	{
-		return (NULL);
+		return (0);
 	}
 	i = 0;
 	while (nelem > 0)
