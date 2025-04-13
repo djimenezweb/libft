@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:26:36 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:10:13 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:20:38 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char *s, unsigned int start, int len)
 {
-	unsigned int		i;
+	int		i;
 	char				*sub;
 
 	i = 0;

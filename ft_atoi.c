@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 09:12:39 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:01:49 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:20:50 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -17,7 +17,7 @@ int	ft_atoi(char *str)
 
 	integer = 0;
 	sign = 1;
-	while (*str >= 9 && *str <= 13 || *str == ' ')
+	while ((*str >= 9 && *str <= 13) || *str == ' ')
 	{
 		str++;
 	}

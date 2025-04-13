@@ -6,9 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:44 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:02:30 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 16:18:33 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
+
+#include <stdlib.h>
 
 /*
 The calloc() function allocates memory for an array of NELEM elements
