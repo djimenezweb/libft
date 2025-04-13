@@ -1,15 +1,19 @@
-NAME = libft
+NAME = libft.a
 CC = cc
-FLAGS = -Wall -Wextra -Werror
+AR = ar
+CCFLAGS = -c -Wall -Werror -Wextra
+ARFLAGS = rcs
 
 all:
-	@echo "Compiling program"
-	$(CC) $(FLAGS) main.c ft_memset.c -o $(NAME).a
+	$(CC) $(CCFLAGS) *.c
+	$(AR) $(ARFLAGS) $(NAME) *.o
 
-#.PHONY: clean fclean re
+clean:
+	rm *.o
 
-#clean:
+fclean: clean
+	rm $(NAME)
 
-#fclean:
+re: fclean all
 
-#re:
+.PHONY: clean fclean re
