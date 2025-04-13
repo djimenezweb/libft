@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:10:22 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 20:59:35 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -21,10 +21,10 @@ int		ft_isprint(int c);
 int		ft_strlen(char *str);
 void	*ft_memset(void *s, int c, int n);
 void	ft_bzero(void *s, int n);
-void	*ft_memcpy(void *dest, void *src, int n);
-void	*ft_memmove(void *dest, void *src, int n);
-int		ft_strlcpy(char *dst, char *src, int size);
-int		ft_strlcat(char *dst, char *src, int size);
+void	*ft_memcpy(void *dest, void *src, unsigned int n);
+void	*ft_memmove(void *dest, void *src, unsigned int n);
+int		ft_strlcpy(char *dst, char *src, unsigned int size);
+int		ft_strlcat(char *dst, char *src, unsigned int size);
 char	ft_toupper(int c);
 char	ft_tolower(int c);
 char	*ft_strchr(char *str, int c);

@@ -6,18 +6,18 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:32:26 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:58:47 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/13 20:39:33 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-void	*ft_memmove(void *dest, void *src, int n)
+void	*ft_memmove(void *dest, const void *src, unsigned int n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (d == s || n <= 0)
+	s = (const unsigned char *)src;
+	if (d == s || n == 0)
 	{
 		return (dest);
 	}
@@ -28,13 +28,15 @@ void	*ft_memmove(void *dest, void *src, int n)
 			*d++ = *s++;
 		}
 	}
-	if (dest > src)
+	else
 	{
 		d += n;
 		s += n;
 		while (n--)
 		{
-			*d-- = *s--;
+			d--;
+			s--;
+			*d = *s;
 		}
 	}
 	return (dest);
