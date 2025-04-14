@@ -6,37 +6,33 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:32:26 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 20:39:33 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:12:50 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-void	*ft_memmove(void *dest, const void *src, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-	if (d == s || n == 0)
-	{
-		return (dest);
-	}
-	if (dest < src)
+	if (dest < src && n != 0)
 	{
 		while (n--)
 		{
 			*d++ = *s++;
 		}
 	}
-	else
+	if (dest > src && n != 0)
 	{
 		d += n;
 		s += n;
 		while (n--)
 		{
-			d--;
-			s--;
-			*d = *s;
+			*--d = *--s;
 		}
 	}
 	return (dest);

@@ -6,29 +6,29 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:26:36 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:20:38 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 10:51:24 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include <stdlib.h>
 
-char	*ft_substr(char *s, unsigned int start, int len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
-	char				*sub;
+	char	*substr;
 
 	i = 0;
-	sub = malloc((len + 1) * sizeof(char));
-	if (!sub)
+	substr = malloc(len + 1);
+	if (!substr)
 	{
-		return (0);
+		return ((void *)0);
 	}
 	while (s[start] && i < len)
 	{
-		sub[i] = s[start];
+		substr[i] = s[start];
 		start++;
 		i++;
 	}
-	sub[i] = '\0';
-	return (sub);
+	substr[i] = '\0';
+	return (substr);
 }

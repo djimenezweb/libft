@@ -1,39 +1,40 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 11:36:59 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 10:38:34 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/14 14:19:31 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/14 14:51:28 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include "libft.h"
-#include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strdup(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		len;
-	char	*dest;
-	char	*src;
-	char	*ptr;
+	char	c;
 
-	len = ft_strlen(str);
-	dest = malloc(len + 1);
-	if (!dest)
+	if (n == -2147483648)
 	{
-		return ((void *)0);
+		write(fd, "-2147483648", 11);
+		return ;
 	}
-	src = str;
-	ptr = dest;
-	while (*src)
+	if (n < 0)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		write(fd, "-", 1);
+		n = n * (-1);
 	}
-	*dest = '\0';
-	return (ptr);
+	if (n / 10 > 0)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	c = (n % 10) + 48;
+	write(fd, &c, 1);
+}
+
+int main(void)
+{
+	ft_putnbr_fd(-2147483648, 1);
 }

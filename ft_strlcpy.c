@@ -6,18 +6,20 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:44:18 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 21:00:52 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:13:37 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-int	ft_strlcpy(char *dst, char *src, unsigned int size)
+#include <stddef.h>
+
+int	ft_strlcpy(char *dst, const char *src, size_t dsize)
 {
 	unsigned int	i;
 
 	i = 0;
-	if (size > 0)
+	if (dsize > 0)
 	{
-		while (src[i] && i < (size - 1))
+		while (src[i] && i < (dsize - 1))
 		{
 			dst[i] = src[i];
 			i++;

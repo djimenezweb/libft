@@ -6,11 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:53:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:01:29 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:17:34 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-char	*ft_strnstr(char *big, char *little, int len)
+#include <stddef.h>
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	int	i_big;
 	int	i_little;

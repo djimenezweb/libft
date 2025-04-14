@@ -1,39 +1,27 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 11:36:59 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 10:38:34 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/14 14:19:31 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/14 15:26:41 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include "libft.h"
-#include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strdup(const char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int		len;
-	char	*dest;
-	char	*src;
-	char	*ptr;
+	while(*s)
+	{
+		write(fd, &*s, 1);
+		s++;
+	}
+}
 
-	len = ft_strlen(str);
-	dest = malloc(len + 1);
-	if (!dest)
-	{
-		return ((void *)0);
-	}
-	src = str;
-	ptr = dest;
-	while (*src)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (ptr);
+int main(void)
+{
+	ft_putendl_fd("hola", 1);
 }

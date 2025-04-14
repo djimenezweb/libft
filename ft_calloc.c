@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:44 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:18:33 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:18:38 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -34,7 +34,7 @@ Si NELEM o SIZE es 0, entonces calloc() devuelve un valor
 de puntero único que más tarde puede pasarse con éxito a free().
 */
 
-void	*ft_calloc(int nelem, int size)
+void	*ft_calloc(size_t nelem, size_t size)
 {
 	int	*arr;
 	int	i;

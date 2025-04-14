@@ -6,11 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:55:10 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 17:24:41 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:16:42 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-void	*ft_memchr(void *s, int c, int n)
+#include <stddef.h>
+
+void	*ft_memchr(void *s, int c, size_t n)
 {
 	unsigned char	*cs;
 	unsigned char	cc;
@@ -25,5 +27,5 @@ void	*ft_memchr(void *s, int c, int n)
 		}
 		cs++;
 	}
-	return ((void*)0);
+	return ((void *)0);
 }

@@ -6,11 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:20:14 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 16:00:24 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:17:02 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-int	ft_memcmp(void *s1, void *s2, int n)
+#include <stddef.h>
+
+int	ft_memcmp(void *s1, void *s2, size_t n)
 {
 	unsigned char	*cs1;
 	unsigned char	*cs2;

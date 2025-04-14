@@ -1,39 +1,28 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 11:36:59 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 10:38:34 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/14 15:28:40 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/14 15:32:56 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include "libft.h"
-#include <stdlib.h>
-
-char	*ft_strdup(const char *str)
+char	*ft_itoa(int n)
 {
-	int		len;
-	char	*dest;
-	char	*src;
-	char	*ptr;
+	char *str;
 
-	len = ft_strlen(str);
-	dest = malloc(len + 1);
-	if (!dest)
-	{
-		return ((void *)0);
-	}
-	src = str;
-	ptr = dest;
-	while (*src)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (ptr);
+	// str = malloc( ??? );
+	
 }
+
+/*
+Utilizando malloc(3), genera una string que
+represente el valor entero recibido como argumento.
+Los números negativos tienen que gestionarse.
+
+Devuelve string que represente el número
+ o NULL si falla malloc.
+ */

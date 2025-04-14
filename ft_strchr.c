@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:24:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 17:16:36 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:15:00 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-char	*ft_strchr(char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
 	while (*str != '\0')
 	{
@@ -22,7 +22,7 @@ char	*ft_strchr(char *str, int c)
 	}
 	if ((char)c == '\0')
 	{
-		return (char *)str;
+		return ((char *)str);
 	}
 	return (0);
 }

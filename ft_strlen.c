@@ -6,13 +6,15 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 12:10:51 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 15:56:38 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:10:49 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*str != '\0')

@@ -6,13 +6,15 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:43:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 20:55:13 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:16:10 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stddef.h>
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)
