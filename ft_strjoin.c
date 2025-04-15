@@ -6,35 +6,37 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:01:43 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:19:20 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:41:40 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		len;
+	size_t	len;
+	size_t	i;
+	size_t	j;
 	char	*str;
-	char	*ptr;
 
-	len = ft_strlen(s1);
-	len += ft_strlen(s2);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	str = malloc(len + 1);
 	if (!str)
 	{
 		return ((void *)0);
 	}
-	ptr = str;
-	while (*s1)
+	i = 0;
+	j = 0;
+	while (s1[i])
 	{
-		*str++ = *s1++;
+		str[i] = s1[i];
+		i++;
 	}
-	while (*s2)
+	while (s2[j])
 	{
-		*str++ = *s2++;
+		str[i++] = s2[j++];
 	}
-	*str = '\0';
-	return (ptr);
+	str[i] = '\0';
+	return (str);
 }

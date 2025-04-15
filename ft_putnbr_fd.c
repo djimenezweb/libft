@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:19:31 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 14:51:28 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:54:45 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -32,9 +32,4 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	c = (n % 10) + 48;
 	write(fd, &c, 1);
-}
-
-int main(void)
-{
-	ft_putnbr_fd(-2147483648, 1);
 }

@@ -6,19 +6,18 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:05:18 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:14:26 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:22:35 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
-#include <stddef.h>
 
-int	ft_strlcat(char *dst, const char *src, size_t dsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-	unsigned int	dst_i;
-	unsigned int	src_i;
-	unsigned int	dst_len;
-	unsigned int	src_len;
+	size_t	dst_i;
+	size_t	src_i;
+	size_t	dst_len;
+	size_t	src_len;
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);

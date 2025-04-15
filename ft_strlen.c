@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 12:10:51 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:10:49 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 14:23:39 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

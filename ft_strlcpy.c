@@ -6,15 +6,15 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:44:18 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:13:37 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:22:48 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <stddef.h>
+#include "libft.h"
 
-int	ft_strlcpy(char *dst, const char *src, size_t dsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dsize)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	if (dsize > 0)

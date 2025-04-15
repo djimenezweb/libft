@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:53:25 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:01:39 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 18:14:25 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 char	**ft_split(char const *s, char c)
 {
-	
+	// to do
 }

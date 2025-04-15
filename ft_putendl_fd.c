@@ -6,22 +6,14 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:19:31 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:26:41 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 16:21:14 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	while(*s)
-	{
-		write(fd, &*s, 1);
-		s++;
-	}
-}
-
-int main(void)
-{
-	ft_putendl_fd("hola", 1);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

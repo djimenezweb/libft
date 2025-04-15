@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 09:36:50 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:11:35 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 14:23:39 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

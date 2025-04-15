@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:44 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:18:38 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:20:24 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <stdlib.h>
+#include "libft.h"
 
 /*
 The calloc() function allocates memory for an array of NELEM elements
@@ -36,18 +36,18 @@ de puntero único que más tarde puede pasarse con éxito a free().
 
 void	*ft_calloc(size_t nelem, size_t size)
 {
-	int	*arr;
-	int	i;
+	int		*arr;
+	size_t	i;
 
 	arr = malloc(nelem * size);
 	if (!arr)
 	{
-		return (0);
+		return ((void *)0);
 	}
 	i = 0;
 	while (nelem > 0)
 	{
-		arr[i] = 0;
+		arr[i] = '\0';
 		i++;
 		nelem--;
 	}

@@ -6,16 +6,16 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:53:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 15:17:34 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:23:26 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i_big;
-	int	i_little;
+	size_t	i_big;
+	size_t	i_little;
 
 	i_big = 0;
 	if (little[0] == '\0')
@@ -34,5 +34,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			return (&big[i_big]);
 		i_big++;
 	}
-	return (0);
+	return ((void *)0);
 }

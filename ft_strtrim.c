@@ -6,19 +6,17 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:30:08 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/14 12:20:52 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/15 18:10:50 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		end;
-	int		i;
+	size_t	start;
+	size_t	end;
+	size_t	i;
 	char	*trimmed;
 
 	start = 0;
@@ -48,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trimmed);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	printf("result: %s\n", ft_strtrim("_______hello_______", "_"));
-}
+} */

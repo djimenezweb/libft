@@ -1,26 +1,30 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 10:08:34 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 14:29:07 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/15 17:54:12 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/15 18:14:25 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-#include "libft.h"
+/* 
+A cada carácter de la string ’s’, aplica la función
+’f’ dando como parámetros el índice de cada
+carácter dentro de ’s’ y la dirección del propio
+carácter, que podrá modificarse si es necesario.
+ */
 
-void	ft_bzero(void *s, size_t n)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*s_char;
+	int	i;
 
-	s_char = s;
-	while (n > 0)
+	i = 0;
+	while (s[i])
 	{
-		*s_char = '\0';
-		s_char++;
-		n--;
+		f(i, s[i]);
+		i++;
 	}
 }
