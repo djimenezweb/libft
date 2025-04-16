@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 09:12:39 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 14:18:26 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:27:15 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int	integer;
 	int	sign;
