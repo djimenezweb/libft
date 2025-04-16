@@ -45,14 +45,11 @@ static int	numlen(int n)
 	return (len);
 }
 
-static int	is_negative(long long num)
+static int	is_negative(long long *num)
 {
-	long long	*ptr;
-
-	ptr = &num;
-	if (num < 0)
+	if (*num < 0)
 	{
-		*ptr = num * (-1);
+		*num = -(*num);
 		return (1);
 	}
 	return (0);
@@ -66,7 +63,7 @@ char	*ft_itoa(int n)
 	long long	num;
 
 	num = n;
-	is_neg = is_negative(num);
+	is_neg = is_negative(&num);
 	len = numlen(num) + is_neg;
 	str = malloc(len + 1);
 	if (!str)
