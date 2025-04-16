@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:54:09 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 18:14:25 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:15:06 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -36,8 +36,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	while (s[i])
 	{
-		// Tengo dudas sobre esta línea
-		str = f(i, s[i]);
+		str[i] = f(i, s[i]);
 		i++;
 	}
 	return (str);
