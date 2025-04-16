@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 10:27:15 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:39:18 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -34,8 +34,8 @@ char		*ft_strchr(char *str, int c);
 char		*ft_strrchr(char *str, int c);
 //			REVISAR:
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
-void		*ft_memchr(void *s, int c, size_t n);
-int			ft_memcmp(void *s1, void *s2, size_t n);
+void		*ft_memchr(const void *s, int c, size_t n);
+int			ft_memcmp(const void *s1, const void *s2, size_t n);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 int			ft_atoi(const char *str);
 void		*ft_calloc(size_t nelem, size_t size);

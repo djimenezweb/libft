@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:20:14 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 14:19:22 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:38:25 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
 
-int	ft_memcmp(void *s1, void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*cs1;
 	unsigned char	*cs2;
