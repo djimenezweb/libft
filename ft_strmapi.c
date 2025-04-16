@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:54:09 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 10:15:06 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:49:39 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -25,15 +25,21 @@ o NULL si falla la reserva de memoria.
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	char	*str;
+	size_t	len;
+	char		*str;
+	int			i;
 
-	i = 0;
-	str = malloc(ft_strlen(str) + 1);
+	if (!f)
+	{
+		return ((void *)0);
+	}
+	len = ft_strlen(s);
+	str = malloc(len + 1);
 	if (!str)
 	{
 		return ((void *)0);
 	}
+	i = 0;
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);
