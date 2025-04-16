@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 10:39:18 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 15:38:22 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -15,6 +15,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;	
+
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -32,7 +39,6 @@ char		ft_toupper(int c);
 char		ft_tolower(int c);
 char		*ft_strchr(char *str, int c);
 char		*ft_strrchr(char *str, int c);
-//			REVISAR:
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -47,7 +53,6 @@ char		*ft_strtrim(char const *s1, char const *set);
 //			TO DO:
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
-//			TENGO DUDAS:
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
 void		ft_putchar_fd(char c, int fd);

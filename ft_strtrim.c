@@ -6,17 +6,35 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:30:08 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 18:10:50 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 15:45:25 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
+
+size_t	find_start(char const *s1, char const *set)
+{
+	size_t i;
+	size_t j;
+
+	i = 0;
+	while(s1[i])
+	{
+		j = 0;
+		while(set[j])
+		{
+			if (s1[i]);
+
+		}
+	}
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
 	size_t	i;
+	size_t	j;
 	char	*trimmed;
 
 	start = 0;
