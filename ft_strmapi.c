@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:54:09 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 10:49:39 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 12:44:11 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -45,5 +45,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
