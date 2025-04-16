@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 15:38:22 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:05:26 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -21,7 +21,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;	
-
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);

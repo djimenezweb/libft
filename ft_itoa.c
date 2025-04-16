@@ -6,15 +6,29 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:28:40 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 12:35:43 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:19:28 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
+
+/* 
+	NO FUNCIONA BIEN LOS NEGATIVOS. HAY QUE CAMBIAR NUM.
+
+ */
+
+/*
+ 	is_neg = 0;
+	if (num < 0)
+	{
+		is_neg = 1;
+		num *= -1;
+	}
+*/
 
 #include "libft.h"
 
 static int	numlen(int n)
 {
-	int				len;
+	int			len;
 	long long	num;
 
 	len = 0;
@@ -31,20 +45,28 @@ static int	numlen(int n)
 	return (len);
 }
 
+static int	is_negative(long long num)
+{
+	long long	*ptr;
+
+	ptr = &num;
+	if (num < 0)
+	{
+		*ptr = num * (-1);
+		return (1);
+	}
+	return (0);
+}
+
 char	*ft_itoa(int n)
 {
-	int				len;
-	int				is_neg;
-	char			*str;
+	int			len;
+	int			is_neg;
+	char		*str;
 	long long	num;
 
 	num = n;
-	is_neg = 0;
-	if (num < 0)
-	{
-		is_neg = 1;
-		num *= -1;
-	}
+	is_neg = is_negative(num);
 	len = numlen(num) + is_neg;
 	str = malloc(len + 1);
 	if (!str)
@@ -62,11 +84,11 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-/* int	main(void)
+int	main(void)
 {
 	//          -2147483648LL
 	// expects: -2147483648
-	char *str = ft_itoa(-2147483648LL);
+	char *str = ft_itoa(-21474);
 	ft_putstr_fd(str, 1);
 	free(str);
-} */
+}

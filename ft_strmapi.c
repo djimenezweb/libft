@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:54:09 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 12:44:11 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:08:39 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -26,8 +26,8 @@ o NULL si falla la reserva de memoria.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	len;
-	char		*str;
-	int			i;
+	char	*str;
+	int		i;
 
 	if (!f)
 	{
