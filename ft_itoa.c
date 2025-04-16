@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:28:40 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 17:50:43 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/16 10:36:34 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
 #include "libft.h"
 
-int	numlen(int n)
+static int	numlen(int n)
 {
 	int	len;
 
