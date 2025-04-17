@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 16:05:26 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/17 10:23:42 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -34,8 +34,8 @@ void		*ft_memcpy(void *dest, const void *src, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t n);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
-char		ft_toupper(int c);
-char		ft_tolower(int c);
+int			ft_toupper(int c);
+int			ft_tolower(int c);
 char		*ft_strchr(char *str, int c);
 char		*ft_strrchr(char *str, int c);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
