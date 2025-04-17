@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:26:36 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 15:57:49 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/17 10:40:16 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -17,12 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*substr;
 
+	if (!s)
+		return ((void *)0);
 	i = 0;
 	substr = malloc(len + 1);
 	if (!substr)
-	{
 		return ((void *)0);
-	}
 	while (s[start] && i < len)
 	{
 		substr[i] = s[start];
