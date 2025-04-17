@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 15:39:16 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 11:17:16 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:52:27 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -15,7 +15,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
-	
+
 	node = (t_list *)malloc(sizeof(t_list));
 	if (!node)
 	{

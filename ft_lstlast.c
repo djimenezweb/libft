@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:11:54 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 11:20:52 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:49:48 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
+	while (lst)
 	{
 		lst = lst->next;
 	}

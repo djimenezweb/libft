@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:32:36 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 11:35:17 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/17 17:53:09 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -32,4 +32,7 @@ Devuelve la nueva lista.
 
 Funciones autorizadas: malloc, free */
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	
+}
