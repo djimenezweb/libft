@@ -1,27 +1,28 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 15:39:16 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 11:17:16 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/17 11:30:59 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/17 11:35:17 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
+/* 
+
+Itera la lista ’lst’ y aplica la función ’f’ en el contenido de cada nodo.
+
+lst: un puntero al primer nodo.
+
+f: un puntero a la función que utilizará cada nodo.
+
+*/
+
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*node;
-	
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-	{
-		return ((void *)0);
-	}
-	node->content = content;
-	node->next = (void *)0;
-	return (node);
+
 }

@@ -1,27 +1,33 @@
 /******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 15:39:16 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 11:17:16 by danielji         ###   ########.fr       */
+/*   Created: 2025/04/17 11:27:53 by danielji          #+#    #+#             */
+/*   Updated: 2025/04/17 11:29:23 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
+/* 
+
+Toma como parámetro un nodo ’lst’ y libera la
+memoria del contenido utilizando la función ’del’
+dada como parámetro, además de liberar el nodo.
+La memoria de ’next’ no debe liberarse.
+
+lst: el nodo a liberar.
+
+del: un puntero a la función utilizada para liberar el contenido del nodo.
+
+Función autorizada: free
+
+*/
+
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*node;
-	
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-	{
-		return ((void *)0);
-	}
-	node->content = content;
-	node->next = (void *)0;
-	return (node);
+
 }
