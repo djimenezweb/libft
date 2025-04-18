@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:29:41 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 19:06:18 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/18 09:53:04 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -16,7 +16,20 @@ Al final, el puntero a la lista debe ser NULL.
 
 lst: la dirección de un puntero a un nodo.
 
-del: un puntero a función utilizado para eliminar el contenido de un nodo.*/
+del: un puntero a función utilizado para eliminar el contenido de un nodo.
+
+your lstclear does not work with basic input
+Test code:
+	t_list *l = lstnew(strdup("nyancat"));
+
+	l->next = lstnew(strdup("#TEST#"));
+	ft_lstclear(&l, lstdelone_f);
+	write(2, "", 1);
+	if (!l)
+		exit(TEST_SUCCESS);
+	exit(TEST_FAILED);
+
+*/
 
 #include "libft.h"
 
