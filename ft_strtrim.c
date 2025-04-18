@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:30:08 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 10:58:49 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/18 15:13:18 by danielji         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 /* We check if (start > end) if the input is completely made of characters
 from set. In that case start can become greater than end */
@@ -20,7 +20,9 @@ static int	is_char_in_set(char c, char const *set)
 	while (*set)
 	{
 		if (*set == c)
+		{
 			return (1);
+		}
 		set++;
 	}
 	return (0);

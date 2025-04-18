@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
@@ -6,9 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:29:41 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 09:53:04 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/18 18:24:27 by danielji         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
+
+#include "libft.h"
 
 /* Elimina y libera el nodo ’lst’ dado y todos los consecutivos de ese nodo,
 utilizando la función ’del’ y free(3).
@@ -29,11 +31,11 @@ Test code:
 		exit(TEST_SUCCESS);
 	exit(TEST_FAILED);
 
+	Al final, el puntero a la lista debe ser NULL.
+	**lst = ((void )*0);
 */
 
-#include "libft.h"
-
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*node;
 	t_list	*next;
@@ -46,6 +48,4 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 		del(next);
 		free(next);
 	}
-	// Al final, el puntero a la lista debe ser NULL.
-	// **lst = ((void )*0);
 }
