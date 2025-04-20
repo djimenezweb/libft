@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
@@ -6,17 +6,17 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:24:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 18:24:00 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 16:38:52 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-/*
-Error in test 5: ft_strrchr(0x5beb447850a7: "teste", 1125: 'e'):
-expected: 0x5beb447850ab, yours: (nil)
+/* The strrchr() function returns a pointer to the last occurrence of the
+character c in the string s. Here "character" means "byte"; this function
+do not work with wide or multibyte characters.
 
-Error in test 6: ft_strrchr(0x5beb447850a7: "teste", 1024: '\0'):
-expected: 0x5beb447850ac, yours: (nil)
-*/
+Returns a pointer to the matched character or NULL if the character is not
+found. The terminating null byte is considered part of the string, so that if
+c is specified as '\0', these functions return a pointer to the terminator. */
 
 char	*ft_strrchr(const char *str, int c)
 {

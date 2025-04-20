@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
@@ -6,12 +6,21 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:30:08 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 15:13:18 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:07:36 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-/* We check if (start > end) if the input is completely made of characters
-from set. In that case start can become greater than end */
+/* Elimina todos los caracteres de la string ’set’ desde el principio y desde
+el final de ’s1’, hasta encontrar un caracter no perteneciente a ’set’.
+La string resultante se devuelve con una reserva de malloc(3).
+
+s1:		La string que debe ser recortada.
+set:	Los caracteres a eliminar de la string.
+
+Devuelve La string recortada o NULL si falla la reserva de memoria.
+
+We check if (start > end) if the input is completely made of characters
+from set. In that case start can become greater than end. */
 
 #include "libft.h"
 

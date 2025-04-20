@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
@@ -6,9 +6,17 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:01:43 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 15:41:40 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:25:13 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
+
+/* Reserva (con malloc(3)) y devuelve una nueva string, formada por la
+concatenación de ’s1’ y ’s2’.
+
+s1: La primera string.
+s2: La string a añadir a ’s1’.
+
+Devuelve la nueva string o NULL si falla la reserva de memoria. */
 
 #include "libft.h"
 #include <stdio.h>

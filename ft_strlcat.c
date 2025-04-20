@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
@@ -6,9 +6,29 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:05:18 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/15 15:22:35 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 16:33:06 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
+
+/* The strlcat() function appends the NUL-terminated string src to the end
+of dst. It will append at most size - strlen(dst) - 1 bytes,
+NUL-terminating the result.
+
+It takes the full size of the buffer (not just the length) and guarantee
+to NUL-terminate the result (as long as size is larger than 0 or as long as
+there is at least one byte free in dst).
+Note that a byte for the NUL should be included in size.
+Both src and dst must be NUL-terminated.
+
+Returns the total length of the string it tried to create.
+For strlcat() that means the initial length of dst plus the length of src.
+
+If strlcat() traverses size characters without finding a NUL, the length of
+the string is considered to be size and the destination string will not be
+NUL-terminated (since there was no space for the NUL).
+This keeps strlcat() from running off the end of a string.
+In practice this should not happen. The check exists to prevent potential
+security problems in incorrect code. */
 
 #include "libft.h"
 

@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
@@ -6,38 +6,15 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:04:53 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 14:56:34 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:26:19 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
+
+/* Añade el nodo ’new’ al final de la lista ’lst’.
+lst:	el puntero al primer nodo de una lista.
+new:	el puntero a un nodo que añadir a la lista. */
 
 #include "libft.h"
-
-/* your lstadd_back does not work with basic input
-Test code:
-	t_list *l = lstnew(strdup("nyacat"));
-	t_list *n = lstnew(strdup("OK"));
-
-	ft_lstadd_back(&l, n);
-	if (l->next == n && !strcmp(l->next->content, "OK"))
-	{
-		exit(TEST_SUCCESS);
-	}
-	exit(TEST_FAILED);
-
-Test code:
-	t_list *l = lstnew(strdup("nyacat"));
-	t_list *n = lstnew(strdup("OK"));
-
-	ft_lstadd_back(&l, n);
-	if (l->next == n && !strcmp(l->next->content, "OK"))
-	{
-		free(l->next);
-		free(l);
-		exit(TEST_SUCCESS);
-	}
-	free(l->next);
-	free(l);
-	exit(TEST_FAILED); */
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

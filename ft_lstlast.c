@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
@@ -6,30 +6,18 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:11:54 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 14:59:25 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:26:19 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
+
+/* Devuelve el último nodo de la lista.
+lst: el principio de la lista. */
 
 #include "libft.h"
 
-/* your lstlast does not work with basic input
-Test code:
-	t_list *l;
-	t_list *expected;
-	t_list *actual;
-
-	l = lstnew(strdup("1"));
-	l->next = lstnew(strdup("2"));
-	l->next->next = lstnew(strdup("3"));
-	expected = l->next->next;
-	actual = ft_lstlast(l);
-	if (actual == expected)
-		exit(TEST_SUCCESS);
-	exit(TEST_FAILED); */
-
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
+	while (lst->next)
 	{
 		lst = lst->next;
 	}

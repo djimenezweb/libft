@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
@@ -6,22 +6,22 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:54:09 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/16 16:08:39 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:11:30 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-#include "libft.h"
+/* Aplica la función ’f’ a cada carácter de la cadena ’s’, pasando su índice
+como primer argumento y el propio carácter como segundo argumento. Se crea
+una nueva cadena (utilizando malloc(3)) para recoger los resultados de las
+sucesivas aplicaciones de ’f’.
 
-/* 
-Aplica la función ’f’ a cada carácter de la cadena
-’s’, pasando su índice como primer argumento y el
-propio carácter como segundo argumento. Se crea una
-nueva cadena (utilizando malloc(3)) para recoger
-los resultados de las sucesivas aplicaciones de ’f’.
+s: La string que iterar.
+f: La función a aplicar sobre cada carácter.
 
 Devuelve la string creada tras el correcto uso de ’f’ sobre cada carácter.
-o NULL si falla la reserva de memoria.
- */
+NULL si falla la reserva de memoria. */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

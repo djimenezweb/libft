@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
@@ -6,9 +6,15 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:28:40 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/17 10:01:24 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:09:34 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
+
+/* Utilizando malloc(3), genera una string que represente el valor entero
+recibido como argumento. Los números negativos tienen que gestionarse.
+
+Devuelve la string que represente el número.
+NULL si falla la reserva de memoria. */
 
 #include "libft.h"
 

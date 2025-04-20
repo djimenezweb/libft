@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
@@ -6,12 +6,22 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:53:25 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/18 18:23:12 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 17:24:55 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
+
+/* Reserva (utilizando malloc(3)) un array de strings resultante de separar
+la string ’s’ en substrings utilizando el caracter ’c’ como delimitador.
+El array debe terminar con un puntero NULL.
+
+s: La string a separar.
+c: El carácter delimitador.
+
+Devuelve el array de nuevas strings resultante de la separación.
+NULL si falla la reserva de memoria. */
 
 #include "libft.h"
-// #include <stdio.h>
+#include <stdio.h>
 
 static char	*trim(const char *s, char c)
 {
@@ -91,23 +101,3 @@ char	**ft_split(char const *s, char c)
 	fill_array(arr, str, c, count);
 	return (arr);
 }
-
-/* int	main(void)
-{
-	int i = 0;
-	char s[] = "----Muy--buenas-- --tardes--a-todos-----";
-	char **arr = ft_split(s, '-');	
-	while (arr[i])
-	{
-		printf("%s\n", arr[i]);
-		i++;
-	}
-	i = 0;
-	while (arr[i])
-	{
-		free(arr[i]);
-		i++;
-	}
-	free(arr);
-}
- */
