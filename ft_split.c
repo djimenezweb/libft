@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:53:25 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/20 17:24:55 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/20 22:18:31 by danielji         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -35,7 +35,7 @@ static char	*trim(const char *s, char c)
 		start++;
 	while (end > 0 && s[end] == c)
 		end--;
-	if (start > end)
+	if (start > end || end < 0)
 		return (ft_strdup(""));
 	trimmed = ft_substr(s, start, (end - start + 1));
 	return (trimmed);
@@ -59,7 +59,7 @@ static size_t	get_string_count(char const *s, char c)
 	return (count + 1);
 }
 
-static void	fill_array(char **arr, char const *str, char c, size_t count)
+static void	string_to_array(char **arr, char const *str, char c, size_t count)
 {
 	size_t	i;
 	size_t	start;
@@ -84,7 +84,7 @@ static void	fill_array(char **arr, char const *str, char c, size_t count)
 		i++;
 		count--;
 	}
-	arr[i] = ((void *) 0);
+	arr[i] = '\0';
 }
 
 char	**ft_split(char const *s, char c)
@@ -98,6 +98,11 @@ char	**ft_split(char const *s, char c)
 	arr = malloc((count * sizeof(char *)) + 1);
 	if (!arr)
 		return ((void *)0);
-	fill_array(arr, str, c, count);
+	if (!s || !c)
+	{
+		arr[0] = '\0';
+		return (arr);
+	}
+	string_to_array(arr, str, c, count);
 	return (arr);
 }
