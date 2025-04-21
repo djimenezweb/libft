@@ -21,10 +21,7 @@ Returns an integer indicating the result of the comparison, as follows:
 
 Returns an integer less than, equal to, or greater than zero if s1 (or the
 first n bytes thereof) is found, respectively, to be less than, to match,
-or be greater than s2.
-
-Change:		while (i < n && (s1[i] && s2[i]))
-to:			while (i < n && s1[i] == s2[i] && s1[i] != '\0') */
+or be greater than s2. */
 
 #include "libft.h"
 
