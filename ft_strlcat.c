@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
@@ -6,22 +6,21 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:05:18 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/20 16:33:06 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/21 16:32:31 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-/* The strlcat() function appends the NUL-terminated string src to the end
-of dst. It will append at most size - strlen(dst) - 1 bytes,
-NUL-terminating the result.
+/* Appends the NUL-terminated string src to the end of dst.
+It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
 
 It takes the full size of the buffer (not just the length) and guarantee
 to NUL-terminate the result (as long as size is larger than 0 or as long as
 there is at least one byte free in dst).
-Note that a byte for the NUL should be included in size.
+A byte for the NUL should be included in size.
 Both src and dst must be NUL-terminated.
 
-Returns the total length of the string it tried to create.
-For strlcat() that means the initial length of dst plus the length of src.
+Returns the total length of the string it tried to create, that means the
+initial length of dst plus the length of src.
 
 If strlcat() traverses size characters without finding a NUL, the length of
 the string is considered to be size and the destination string will not be
@@ -42,9 +41,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dsize <= dst_len)
-	{
 		return (dsize + src_len);
-	}
 	dst_i = dst_len;
 	src_i = 0;
 	while (src[src_i] && (dst_i + src_i < dsize - 1))

@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
@@ -6,13 +6,12 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 09:36:50 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/20 16:15:32 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/21 16:10:18 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 /* The memset() function fills the first n bytes of the memory area pointed
-to by s with the constant byte c.
-Returns a pointer to the memory area s. */
+to by s with the constant byte c. Returns a pointer to the memory area s. */
 
 #include "libft.h"
 

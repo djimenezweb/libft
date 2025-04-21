@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:29:41 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/20 17:26:19 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/21 15:28:22 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
-/* Elimina y libera el nodo ’lst’ dado y todos los consecutivos de ese nodo,
+/* Elimina y libera el nodo ’lst’ dado y todos los consecutivos de ese nodo
 utilizando la función ’del’ y free(3).
 Al final, el puntero a la lista debe ser NULL.
 
@@ -22,12 +22,15 @@ t1:KO t3:KO t4:KO */
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*temp;
+	t_list	*p;
+	t_list	*q;
 
-	while (*lst)
+	p = *lst;
+	while (p)
 	{
-		temp = *lst;
-		del(lst);
-		*lst = temp->next;
+		q = p;
+		p = p->next;
+		del(q);
+		free(q);
 	}
 }

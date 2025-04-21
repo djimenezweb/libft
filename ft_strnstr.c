@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
@@ -6,42 +6,40 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 15:53:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/20 16:50:27 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/21 17:27:01 by danielji         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 /* The strnstr() function locates the first occurrence of the null-terminated
-string little in the string big, where not more than len characters are
+string LITTLE in the string BIG, where not more than LEN characters are
 searched. Characters that appear after a ‘\0’ character are not searched.
 
-Returns a pointer to the first character of the first occurrence of
-little is returned. 
-If little is an empty string, big is returned.
-If little occurs nowhere in big, NULL is returned.*/
+If LITTLE is an empty string, BIG is returned.
+If LITTLE occurs nowhere in BIG, NULL is returned.
+Returns a pointer to the first character of the first occurrence of LITTLE. */
 
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i_big;
-	size_t	i_little;
+	size_t	b;
+	size_t	l;
 
-	i_big = 0;
 	if (little[0] == '\0')
-	{
 		return ((char *)big);
-	}
-	while (big[i_big] && i_big <= len - 1)
+	b = 0;
+	while (big[b] && b <= len - 1)
 	{
-		i_little = 0;
-		while (big[i_big + i_little] == little[i_little]
-			&& i_big + i_little < len && little[i_little])
+		l = 0;
+		while (b + l < len && little[l] && big[b + l] == little[l])
 		{
-			i_little++;
+			l++;
 		}
-		if (little[i_little] == '\0')
-			return ((char *)&big[i_big]);
-		i_big++;
+		if (little[l] == '\0')
+		{
+			return ((char *)&big[b]);
+		}
+		b++;
 	}
 	return ((void *)0);
 }
