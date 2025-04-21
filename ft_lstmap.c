@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
@@ -8,10 +8,9 @@
 /*   Created: 2025/04/17 11:32:36 by danielji          #+#    #+#             */
 /*   Updated: 2025/04/21 17:24:37 by danielji         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 /* Itera la lista ’lst’ y aplica la función ’f’ al contenido de cada nodo.
-(¿usar ft_lstiter?)
 Crea una lista resultante de la aplicación correcta y sucesiva de la función
 ’f’ sobre cada nodo. La función ’del’ se utiliza para eliminar el contenido
 de un nodo, si hace falta.
@@ -23,15 +22,31 @@ del:	un puntero a función utilizado para eliminar el contenido de un nodo,
 		si es necesario.
 
 Devuelve la nueva lista o NULL si falla la reserva de memoria.
-Funciones autorizadas: malloc, free
-t1:KO t2:KO t4:KO */
+Funciones autorizadas: malloc, free */
 
 #include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
+	t_list	*new_node;
 
+	if (!lst || !f)
+		return ((void *)0);
 	new_list = ft_lstnew(f(lst->content));
+	if (!new_list)
+		return ((void *)0);
+	lst = lst->next;
+	while (lst)
+	{
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_node)
+		{
+			ft_lstclear(&new_list, del);
+			return ((void *)0);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
+	}
 	return (new_list);
 }
