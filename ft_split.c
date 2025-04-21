@@ -1,4 +1,4 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
@@ -6,9 +6,9 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:53:25 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/20 22:18:31 by danielji         ###   ########.fr       */
+/*   Updated: 2025/04/21 10:43:55 by danielji         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 /* Reserva (utilizando malloc(3)) un array de strings resultante de separar
 la string ’s’ en substrings utilizando el caracter ’c’ como delimitador.
@@ -50,13 +50,21 @@ static size_t	get_string_count(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if ((s[i] == c) && (s[i - 1] != c))
+		while (s[i] && s[i] == c)
 		{
+			i++;
+		}
+		if (s[i])
+		{
+			i++;
 			count++;
 		}
-		i++;
+		while (s[i] && s[i] != c)
+		{
+			i++;
+		}
 	}
-	return (count + 1);
+	return (count);
 }
 
 static void	string_to_array(char **arr, char const *str, char c, size_t count)
@@ -98,7 +106,7 @@ char	**ft_split(char const *s, char c)
 	arr = malloc((count * sizeof(char *)) + 1);
 	if (!arr)
 		return ((void *)0);
-	if (!s || !c)
+	if (!c || !s)
 	{
 		arr[0] = '\0';
 		return (arr);
@@ -106,3 +114,15 @@ char	**ft_split(char const *s, char c)
 	string_to_array(arr, str, c, count);
 	return (arr);
 }
+
+/* int	main(void)
+{
+	int i = 0;
+	char** result = ft_split("          ", ' ');
+
+	while (result[i] != NULL)
+	{
+		ft_putendl_fd(result[i], 1);
+		i++;
+	}
+} */
