@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 /* Devuelve el último nodo de la lista.
-lst: el principio de la lista. */
+lst: el principio de la lista. 
+t1:KO t2:KO t3:KO t4:KO */
 
 #include "libft.h"
 

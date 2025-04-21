@@ -13,8 +13,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-#bonus: all $(BONUSOBJS)
-#	$(AR) $(ARFLAGS) $(NAME) $(BONUSOBJS)
+bonus: all $(BONUSOBJS)
+	$(AR) $(ARFLAGS) $(NAME) $(BONUSOBJS)
 
 clean:
 	rm -f $(OBJS) $(BONUSOBJS)

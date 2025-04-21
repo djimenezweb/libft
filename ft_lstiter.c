@@ -12,7 +12,8 @@
 
 /* Itera la lista ’lst’ y aplica la función ’f’ en el contenido de cada nodo.
 lst:	un puntero al primer nodo.
-f:		un puntero a la función que utilizará cada nodo. */
+f:		un puntero a la función que utilizará cada nodo.
+t1:KO t2:KO t3:KO t4:KO*/
 
 #include "libft.h"
 

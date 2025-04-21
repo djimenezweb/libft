@@ -21,7 +21,6 @@ Devuelve el array de nuevas strings resultante de la separación.
 NULL si falla la reserva de memoria. */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*trim(const char *s, char c)
 {

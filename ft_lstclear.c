@@ -15,7 +15,8 @@ utilizando la función ’del’ y free(3).
 Al final, el puntero a la lista debe ser NULL.
 
 lst:	la dirección de un puntero a un nodo.
-del:	un puntero a función utilizado para eliminar el contenido de un nodo. */
+del:	un puntero a función utilizado para eliminar el contenido de un nodo.
+t1:KO t3:KO t4:KO */
 
 #include "libft.h"
 

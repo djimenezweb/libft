@@ -20,7 +20,7 @@ c is specified as '\0', these functions return a pointer to the terminator. */
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	*ptr;
+	const char	*ptr;
 
 	ptr = str;
 	while (*ptr != '\0')
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		if (*ptr == (unsigned char)c)
 		{
-			return (ptr);
+			return ((char *)ptr);
 		}
 		ptr--;
 	}

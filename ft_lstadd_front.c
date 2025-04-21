@@ -12,7 +12,7 @@
 
 /* Añade el nodo ’new’ al principio de la lista ’lst’.
 lst: la dirección de un puntero al primer nodo de una lista.
-new: un puntero al nodo que aijadir al principio de la lista. */
+new: un puntero al nodo que añadir al principio de la lista. */
 
 #include "libft.h"
 

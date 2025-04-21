@@ -19,7 +19,6 @@ s2: La string a añadir a ’s1’.
 Devuelve la nueva string o NULL si falla la reserva de memoria. */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

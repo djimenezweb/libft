@@ -23,7 +23,8 @@ del:	un puntero a función utilizado para eliminar
 		el contenido de un nodo, si es necesario.
 
 Devuelve la nueva lista o NULL si falla la reserva de memoria.
-Funciones autorizadas: malloc, free */
+Funciones autorizadas: malloc, free
+t1:KO t2:KO t4:KO */
 
 #include "libft.h"
 

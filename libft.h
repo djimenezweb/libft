@@ -13,14 +13,14 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;	
+}					t_list;
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -47,9 +47,7 @@ void		*ft_calloc(size_t nelem, size_t size);
 char		*ft_strdup(const char *str);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-//			MODIFICAR PARA SET:
 char		*ft_strtrim(char const *s1, char const *set);
-//			TO DO:
 char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
