@@ -101,6 +101,17 @@ static void	**string_to_array(char **arr, char const *str, char c, size_t count)
 	return ((void *)0);
 }
 
+/* DOUBLE FREE ISSUE IN FT_SPLIT
+You call string_to_array but you don’t check its return value or status
+afterward. It is declared to return a void **, but the returned value is not
+used or checked in ft_split.
+When ft_substr fails (i.e., returns NULL), the function calls free_array,
+freeing all previously allocated strings in arr, but it does not inform the
+caller (ft_split) that it failed—because you're not using the return value!
+
+To fix this you need to check the result of string_to_array, and only return
+arr if it succeeded. */
+
 char	**ft_split(char const *s, char c)
 {
 	char	*str;

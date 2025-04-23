@@ -10,14 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* The strncmp() function compares only the first (at most) n bytes of the two
-strings s1 and s2 the two strings s1 and s2.
+/* Compares only the first (at most) n bytes of the two strings s1 and s2.
 The comparison is done using unsigned characters.
 
 Returns an integer indicating the result of the comparison, as follows:
 •  0, if the s1 and s2 are equal;
 •  a negative value if s1 is less than s2;
-•  a positive value if s1 is greater than s2. */
+•  a positive value if s1 is greater than s2.
+
+The `if (i < n)` in line 41 checks if one string ends before the other or we
+haven't reached n characters compared. */
 
 #include "libft.h"
 
