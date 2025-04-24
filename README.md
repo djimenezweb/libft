@@ -1,10 +1,5 @@
 # Libft
 
-Repositorio del proyecto terminado:
-```
-git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-a3b8dc3e-b88f-4c41-a80e-0b88c37fa243-6489439-danielji
-```
-
 ## Parte obligatoria
 
 Las funciones obligatorias están aprobadas por Moulinette.
@@ -77,3 +72,8 @@ void     ft_lstclear(t_list **lst, void (*del)(void *));
 void     ft_lstiter(t_list *lst, void (*f)(void *));
 t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
+
+## Repositorios originales
+
+- Libft: `git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-a3b8dc3e-b88f-4c41-a80e-0b88c37fa243-6489439-danielji
+`
