@@ -1,10 +1,6 @@
 # Libft
 
-## Parte obligatoria
-
-Las funciones obligatorias están aprobadas por Moulinette.
-
-### Funciones de `libc`
+## Funciones de `libc`
 
 ```c
 int      ft_isalpha(int c);
@@ -32,7 +28,7 @@ void    *ft_calloc(size_t nelem, size_t size);
 char    *ft_strdup(const char *str);
 ```
 
-### Funciones adicionales
+## Funciones adicionales
 
 ```c
 char    *ft_substr(char const *s, unsigned int start, size_t len);
@@ -48,16 +44,7 @@ void     ft_putendl_fd(char *s, int fd);
 void     ft_putnbr_fd(int n, int fd);
 ```
 
-### Bugs
-
-El test `francinette --strict` avisa de un fallo de doble free en `split.c`:
-
-```
-You are trying to free a pointer that was already freed
-```
-Este fallo todavía no se ha corregido.
-
-## Bonus
+## Libft Bonus
 
 Las funciones bonus están aprobadas por los tests de Francinette, pero no se enviaron al proyecto final.
 
@@ -73,7 +60,58 @@ void     ft_lstiter(t_list *lst, void (*f)(void *));
 t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
 
-## Repositorios originales
+## Get Next Line
+```c
+char    *get_next_line(int fd);
+```
 
-- Libft: `git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-a3b8dc3e-b88f-4c41-a80e-0b88c37fa243-6489439-danielji
-`
+## Bugs
+
+### ft_split.c
+
+El test `francinette --strict` avisa de un fallo de doble free en `ft_split.c`:
+
+```
+You are trying to free a pointer that was already freed
+```
+
+### get_next_line.c
+El test `francinette --strict` avisa del fallo `4_NULL_CHECK.KO` al hacer el test sobre `empty.txt` con distintos tamaños de buffer.
+
+```
+BUFFER_SIZE: 1
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 5_NULL_CHECK.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4_NULL_CHECK.KO 
+Segmentation fault (core dumped)
+make: [Makefile:23: mandatory] Error 139 (ignored)
+
+BUFFER_SIZE: 10
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 5_NULL_CHECK.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4_NULL_CHECK.KO 
+Segmentation fault (core dumped)
+make: [Makefile:24: mandatory] Error 139 (ignored)
+
+BUFFER_SIZE: 1000000
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 5_NULL_CHECK.OK 
+empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4_NULL_CHECK.KO 
+Segmentation fault (core dumped)
+make: [Makefile:25: mandatory] Error 139 (ignored)
+
+```
+
+## Repositorios originales
+<details>
+<summary>Libft</summary>
+
+```
+git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-a3b8dc3e-b88f-4c41-a80e-0b88c37fa243-6489439-danielji
+```
+</details>
+
+<details>
+<summary>Get Next Line</summary>
+
+```
+git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-f0678712-de9b-492e-baef-03b406eb120e-6523107-danielji
+```
+</details>
