@@ -65,6 +65,17 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char    *get_next_line(int fd);
 ```
 
+## ft_printf
+```c
+int      ft_printf(char const *str, ...);
+ssize_t  ft_putchar_r(char c);
+ssize_t  ft_putstr_r(char *s);
+ssize_t  ft_putnbr_r(int n);
+ssize_t  ft_putnbr_u_r(unsigned int n);
+ssize_t  ft_puthex_int_r(unsigned int num, char *base);
+ssize_t  ft_putptr_r(void *ptr);
+```
+
 ## Bugs
 
 ### ft_split.c
@@ -79,24 +90,8 @@ You are trying to free a pointer that was already freed
 El test `francinette --strict` avisa del fallo `4_NULL_CHECK.KO` al hacer el test sobre `empty.txt` con distintos tamaños de buffer.
 
 ```
-BUFFER_SIZE: 1
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 5_NULL_CHECK.OK 
 empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4_NULL_CHECK.KO 
 Segmentation fault (core dumped)
-make: [Makefile:23: mandatory] Error 139 (ignored)
-
-BUFFER_SIZE: 10
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 5_NULL_CHECK.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4_NULL_CHECK.KO 
-Segmentation fault (core dumped)
-make: [Makefile:24: mandatory] Error 139 (ignored)
-
-BUFFER_SIZE: 1000000
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 5_NULL_CHECK.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 4_NULL_CHECK.KO 
-Segmentation fault (core dumped)
-make: [Makefile:25: mandatory] Error 139 (ignored)
-
 ```
 
 ## Repositorios originales
@@ -113,5 +108,13 @@ git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-a3b8dc3e-b88f-4c41-a80e-0b88c
 
 ```
 git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-f0678712-de9b-492e-baef-03b406eb120e-6523107-danielji
+```
+</details>
+
+<details>
+<summary>ft_printf</summary>
+
+```
+git@vogsphere-v2.42madrid.com:vogsphere/intra-uuid-b4a275c9-93f9-43a0-9ecd-8bf8c9d1621f-6569925-danielji
 ```
 </details>
