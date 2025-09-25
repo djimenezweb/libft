@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:44 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 16:30:31 by danielji         ###   ########.fr       */
+/*   Updated: 2025/09/25 23:54:40 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Allocates memory for an array of `nelem` elements of `size` bytes each and
-returns a pointer to the allocated memory. The memory is set to zero.
-If `nelem` or `size` is `0`, it returns a unique pointer value that can later
-be successfully passed to `free()`. */
-void	*ft_calloc(size_t nelem, size_t size)
+/* Erases the data in the n bytes of the memory starting at the location
+pointed to by s, by writing zeros (bytes containing '\0') to that area. */
+void	ft_bzero(void *s, size_t n)
 {
-	void	*arr;
+	unsigned char	*s_char;
 
-	arr = malloc(nelem * size);
-	if (!arr)
-		return ((void *)0);
-	ft_bzero(arr, nelem * size);
-	return (arr);
+	s_char = (unsigned char *)s;
+	while (n > 0)
+	{
+		*s_char = '\0';
+		s_char++;
+		n--;
+	}
 }
