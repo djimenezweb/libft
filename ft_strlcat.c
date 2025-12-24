@@ -6,16 +6,16 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:05:18 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 16:32:31 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:54:07 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Appends the NULL-terminated string `src` to the end of `dst`.
+/* Append the NULL-terminated string `src` to the end of `dst`.
 It will append at most `size - strlen(dst) - 1` bytes, NULL-terminating the
 result.
-Returns the total length of the string it tried to create, that means the
+Return the total length of the string it tried to create, that means the
 initial length of `dst` plus the length of `src`.*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {

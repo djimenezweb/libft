@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:53:25 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 17:31:44 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:52:51 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ static void	**string_to_array(char **arr, char const *str, char c, size_t count)
 	return ((void *)0);
 }
 
-/* Allocates memory and returns an array of strings obtained by splitting `s`
+/* Allocate memory and return an array of strings obtained by splitting `s`
 using the character `c` as a delimiter.
 The array must end with a `NULL` pointer. */
 char	**ft_split(char const *s, char c)

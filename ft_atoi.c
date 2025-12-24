@@ -6,17 +6,17 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 09:12:39 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 16:29:43 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:47:06 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Converts the initial portion of the string pointed to by `nptr` to `int`.
+/* Convert the initial portion of the string pointed to by `nptr` to `int`.
 Same as `strtol(nptr, NULL, 10);` except that `atoi()` does not detect errors.
 The string may begin with an arbitrary amount of white space (as determined by
 `isspace(3)`) followed by a single optional `+` or `-` sign.
 The remainder of the string is converted to a long value in the obvious manner,
 stopping at the first character which is not a valid digit in the given base.
-Returns the converted value or `0` on error. */
+Return the converted value or `0` on error. */
 int	ft_atoi(const char *str)
 {
 	long	nbr;

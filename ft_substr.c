@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 11:26:36 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 11:05:27 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:56:17 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Allocates memory and returns a substring from the string `s`.
+/* Allocate memory and return a substring from the string `s`.
 The substring starts at index `start` and has a maximum length of `len`. */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

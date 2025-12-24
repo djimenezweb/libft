@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:24:00 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 15:58:34 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:55:48 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Returns a pointer to the last occurrence of the character `c` in the
+/* Return a pointer to the last occurrence of the character `c` in the
 string `s`. Returns `NULL` if the character is not found.
 The terminating null byte is considered part of the string, so that if
 `c` is specified as `'\0'`, it returns a pointer to the terminator. */

@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 11:42:43 by danielji          #+#    #+#             */
-/*   Updated: 2025/08/12 11:50:24 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:46:45 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	is_negative(int *i, char *str)
 	return (1);
 }
 
-/* Converts the string `str` to a double floating number */
+/* Convert the string `str` to a double floating number */
 double	ft_atod(char *str)
 {
 	int		i;

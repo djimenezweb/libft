@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:01:43 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 16:32:09 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:53:49 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Allocates memory and returns a new string, which is the result of
+/* Allocate memory and return a new string, which is the result of
 concatenating `s1` and `s2`.*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:28:40 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 16:07:01 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:49:27 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	is_negative(long long *num)
 	return (0);
 }
 
-/* Returns a string representing the integer received
+/* Return a string representing the integer received
 as an argument or `NULL` if memory allocation fails */
 char	*ft_itoa(int n)
 {

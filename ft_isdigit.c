@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 12:10:51 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/13 15:55:38 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:49:11 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Returns `1` if character is numeric */
+/* Return `1` if character is numeric */
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

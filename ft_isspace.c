@@ -6,11 +6,11 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/25 23:41:59 by danielji          #+#    #+#             */
-/*   Updated: 2025/09/25 23:53:57 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:49:20 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Returns `1` if character is a space, horizontal tab (`\t`), newline (`\n`),
+/* Return `1` if character is a space, horizontal tab (`\t`), newline (`\n`),
 vertical tab (`\v`), form-feed (`\f`), or carriage return (`\r`)*/
 int	ft_isspace(int c)
 {

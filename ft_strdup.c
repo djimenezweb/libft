@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 11:36:59 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/28 12:31:00 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:53:26 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Returns a pointer to a new string which is a duplicate of the string `s`
+/* Return a pointer to a new string which is a duplicate of the string `s`
 or `NULL` if insufficient memory was available */
 char	*ft_strdup(const char *str)
 {

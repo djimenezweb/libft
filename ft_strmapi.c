@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:54:09 by danielji          #+#    #+#             */
-/*   Updated: 2025/04/21 16:33:51 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:54:43 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Applies the function `f` to each character of the string `s`, passing its
+/* Apply the function `f` to each character of the string `s`, passing its
 index as the first argument and the character itself as the second.
 A new string is created to store the results from the successive applications
 of `f`.*/

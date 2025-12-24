@@ -6,16 +6,16 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 22:57:16 by danielji          #+#    #+#             */
-/*   Updated: 2025/05/19 16:29:47 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:58:12 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Writes a number as hexadecimal.
+/* Write a number as hexadecimal.
 `uintptr_t` is an `unsigned int` type designed to hold pointer values.
 Base is passed as a string: `"0123456789abcdef"` or `"0123456789ABCDEF"`
-Returns number of characters written*/
+Return number of characters written*/
 static ssize_t	ft_puthex_r(uintptr_t num, char *base)
 {
 	char	c;
@@ -29,14 +29,14 @@ static ssize_t	ft_puthex_r(uintptr_t num, char *base)
 	return (written);
 }
 
-/* Writes an unsigned int number as hexadecimal.
-Returns number of characters written*/
+/* Write `an unsigned int` number as hexadecimal.
+Return number of characters written*/
 ssize_t	ft_puthex_int_r(unsigned int num, char *base)
 {
 	return (ft_puthex_r((uintptr_t)num, base));
 }
 
-/* Writes a pointer by calling ft_puthex_r or writing 0.
+/* Write a pointer by calling `ft_puthex_r` or writing `0`.
 Returns number of characters written */
 ssize_t	ft_putptr_r(void *ptr)
 {

@@ -6,13 +6,13 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 16:19:31 by danielji          #+#    #+#             */
-/*   Updated: 2025/05/19 16:20:11 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 18:58:56 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Outputs the string `s` and returns number of characters written.*/
+/* Output the string `s` and return number of characters written.*/
 ssize_t	ft_putstr_r(char *s)
 {
 	ssize_t	written;
