@@ -6,7 +6,7 @@
 /*   By: danielji <danielji@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:11:38 by danielji          #+#    #+#             */
-/*   Updated: 2025/09/25 23:53:57 by danielji         ###   ########.fr       */
+/*   Updated: 2025/12/24 21:41:39 by danielji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	*ft_calloc(size_t nelem, size_t size);
 char	*ft_strdup(const char *str);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin3(char *str1, char *str2, char *str3);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
@@ -88,5 +89,14 @@ ssize_t	ft_putnbr_r(int n);
 ssize_t	ft_putnbr_u_r(unsigned int n);
 ssize_t	ft_puthex_int_r(unsigned int num, char *base);
 ssize_t	ft_putptr_r(void *ptr);
+
+// ft_dprintf
+int		ft_dprintf(int fd, char const *str, ...);
+ssize_t	ft_dputchar_r(int fd, char c);
+ssize_t	ft_dputstr_r(int fd, char *s);
+ssize_t	ft_dputnbr_r(int fd, int n);
+ssize_t	ft_dputnbr_u_r(int fd, unsigned int n);
+ssize_t	ft_dputhex_ir(int fd, unsigned int num, char *base);
+ssize_t	ft_dputptr_r(int fd, void *ptr);
 
 #endif
